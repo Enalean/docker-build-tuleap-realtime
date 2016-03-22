@@ -1,0 +1,8 @@
+This container helps to build Tuleap Realtime package.
+
+Usage:
+
+```bash
+docker run --rm -v $PWD:/realtime enalean/build-tuleap-realtime
+```
+
