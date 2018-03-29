@@ -1,9 +1,8 @@
-FROM centos:6.7
+FROM centos:6
 
-MAINTAINER "Nicolas Terray" <nicolas.terray@enalean.com>
-
-RUN yum install -y epel-release
-RUN yum install -y nodejs npm jq tar nodejs-packaging rpm-build
+RUN yum install -y epel-release && \
+    yum install -y nodejs npm jq tar nodejs-packaging rpm-build && \
+    yum clean all
 
 VOLUME /realtime
 
