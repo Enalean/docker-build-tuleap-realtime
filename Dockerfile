@@ -2,7 +2,8 @@ FROM centos:6
 
 RUN yum install -y epel-release && \
     yum install -y nodejs npm jq tar nodejs-packaging rpm-build && \
-    yum clean all
+    yum clean all && \
+    npm config set cafile /etc/pki/tls/certs/ca-bundle.crt
 
 VOLUME /realtime
 
